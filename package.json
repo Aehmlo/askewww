@@ -1,0 +1,31 @@
+{
+  "name": "askew",
+  "version": "0.0.1",
+  "description": "A twisty puzzle timer website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aehmlo/askew.git"
+  },
+  "keywords": [
+    "twisty",
+    "puzzle",
+    "rubik",
+    "rubik's",
+    "cube",
+    "timer"
+  ],
+  "author": "Alex Hamilton <alex@hmltn.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aehmlo/askew/issues"
+  },
+  "homepage": "https://github.com/aehmlo/askew#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.2"
+  }
+}
