@@ -1,9 +1,17 @@
-var koa = require("koa");
+const koa = require("koa");
+const app = koa();
 
-var app = koa();
+const Pug = require("koa-pug");
+const pug = new Pug({
+	viewPath: "./views",
+	debug: false,
+	pretty: true,
+	locals: {},
+	app: app
+});
 
 app.use(function *() {
-	this.body = "Hello, cubers of the world!";
+	this.render("index");
 });
 
 module.exports = app;
