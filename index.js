@@ -7,7 +7,8 @@ const pug = new Pug({
 	debug: false,
 	pretty: true,
 	locals: {},
-	app: app
+	app: app,
+	noCache: !(process.env.NODE_ENV !== "production")
 });
 
 app.use(function *() {
