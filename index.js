@@ -1,18 +1,14 @@
-const koa = require("koa");
-const app = koa();
+const express = require("express");
+const app = express();
+const serve = express.static;
 
-const Pug = require("koa-pug");
-const pug = new Pug({
-	viewPath: "./views",
-	debug: false,
-	pretty: true,
-	locals: {},
-	app: app,
-	noCache: !(process.env.NODE_ENV !== "production")
-});
+app.set("views", "./views");
+app.set("view engine", "pug");
 
-app.use(function *() {
-	this.render("index");
+app.use(serve("./public"));
+
+app.get("/", function(req, res) {
+	res.render("index");
 });
 
 module.exports = app;
