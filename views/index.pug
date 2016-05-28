@@ -67,33 +67,7 @@ html
 					toggleTimer(event);
 				}
 			});
-		style(type="text/css").
-			* {
-				padding: 0;
-				margin: 0;
-			}
-			#timeDisplay, #scramble {
-				text-align: center;
-			}
-			#scramble {
-				padding: 0.7em;
-				font-size: 1.5em;
-				font-weight: 100;
-				transition: opacity 0.15s ease-in;
-			}
-			#timeDisplay {
-				font-size: 8em;
-				line-height: 7.5em;
-				line-height: calc(100vh - 1.5em);
-				font-family: "Digital";
-			}
-			#seconds {
-				font-size: 1.5em;
-			}
-			@font-face {
-				font-family: "Digital";
-				src: url("/fonts/digital.ttf");
-			}
+		link(rel="stylesheet", type="text/css", href="/css/wireframe.css")
 	body
 		#scramble
 		#timeDisplay
