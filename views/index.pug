@@ -19,3 +19,5 @@ html
 		script(type="text/javascript").
 			displayScramble();
 			if(themeify) { themeify(); }
+			var settings = document.getElementById("settings");
+			settings.onclick = toggleSettings;

@@ -61,6 +61,14 @@ const toggleTimer = function(event) {
 	}
 };
 
+const displaySettings = function() {
+	console.log("Would now display the settings menu.");
+};
+
+const toggleSettings = function() {
+	displaySettings();
+};
+
 document.addEventListener("mousedown", function(event) {
 	if(timerRunning) {
 		toggleTimer(event);
