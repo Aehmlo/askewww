@@ -51,4 +51,9 @@ const changeTheme = function(name) {
 	name = themes.hasOwnProperty(name) ? name : "pinky";
 	window.localStorage.setItem("themeName", name);
 	applyTheme(name);
+};
+
+const themeify = function() {
+	const name = window.localStorage.getItem("themeName") || "pinky";
+	applyTheme(name);
 }
