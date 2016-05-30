@@ -46,3 +46,9 @@ const applyTheme = function(name) {
 	body.style.color = theme.body.text || "#000";
 	body.style.fontFamily = theme.body.font || "Digital";
 };
+
+const changeTheme = function(name) {
+	name = themes.hasOwnProperty(name) ? name : "pinky";
+	window.localStorage.setItem("themeName", name);
+	applyTheme(name);
+}
