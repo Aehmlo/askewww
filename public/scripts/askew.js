@@ -1,6 +1,7 @@
 "use strict";
 
 var allowToggle = true;
+var settingsActive = false;
 
 const config = {
 	_size: 3,
@@ -62,11 +63,19 @@ const toggleTimer = function(event) {
 };
 
 const displaySettings = function() {
+	settingsActive = true;
+	settings.style.opacity = 1;
 	console.log("Would now display the settings menu.");
 };
 
+const dismissSettings = function() {
+	settingsActive = false;
+	settings.style.opacity = null;
+	console.log("Would now dismiss the settings menu.");
+};
+
 const toggleSettings = function() {
-	displaySettings();
+	(settingsActive ? dismissSettings : displaySettings).call();
 };
 
 document.addEventListener("mousedown", function(event) {
@@ -76,7 +85,7 @@ document.addEventListener("mousedown", function(event) {
 });
 
 document.addEventListener("keydown", function(event) {
-	if(event.which === 0 || event.which === 32) {
+	if((event.which === 0 || event.which === 32) && !settingsActive) {
 		toggleTimer(event);
 	}
 });
