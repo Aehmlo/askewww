@@ -13,9 +13,9 @@
 
 #timeDisplay {
 	text-align: center;
-	font-size: 8em;
-	line-height: 7.5em;
-	line-height: calc(100vh - 1.5em);
+	font-size: 10em;
+	line-height: 6em;
+	line-height: calc(100vh - 1.2em);
 }
 
 #seconds {
