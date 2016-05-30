@@ -49,11 +49,11 @@ const applyTheme = function(name) {
 
 const changeTheme = function(name) {
 	name = themes.hasOwnProperty(name) ? name : "pinky";
-	window.localStorage.setItem("themeName", name);
+	window.localStorage.themeName = name;
 	applyTheme(name);
 };
 
 const themeify = function() {
-	const name = window.localStorage.getItem("themeName") || "pinky";
+	const name = window.localStorage.themeName || "pinky";
 	applyTheme(name);
-}
+};
