@@ -37,6 +37,7 @@ const themes = {
 const applyTheme = function(name) {
 	name = themes.hasOwnProperty(name) ? name : "pinky";
 	const theme = themes[name];
+	currentTheme = theme;
 	const scramble = document.getElementById("scramble");
 	const body = document.body;
 	scramble.style.backgroundColor = theme.scramble.background || "#fff";
@@ -57,3 +58,5 @@ const themeify = function() {
 	const name = window.localStorage.themeName || "pinky";
 	applyTheme(name);
 };
+
+var currentTheme = themes.pinky;

@@ -14,6 +14,7 @@ var scramble;
 
 const displayScramble = function() {
 	document.getElementById("scramble").style.opacity = 1;
+	document.getElementById("settings").style.opacity = null;
 	scramble = cube.createScramble(config.scrambleLength);
 	const scrambleSpan = document.getElementById("scramble");
 	scrambleSpan.innerText = scramble.toString();
@@ -33,6 +34,7 @@ var updateTimer;
 
 const startTimer = function(event) {
 	document.getElementById("scramble").style.opacity = 0;
+	document.getElementById("settings").style.opacity = 0;
 	startTime = event.timeStamp;
 	timerRunning = true;
 	updateTimer = setInterval(updateTimeDisplay, 20);
