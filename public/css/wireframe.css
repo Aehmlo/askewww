@@ -26,3 +26,18 @@
 	font-family: "Digital";
 	src: url("/fonts/digital.ttf");
 }
+
+#settings {
+	fill: #fff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3vw;
+	height: 3vw;
+	opacity: 0.4;
+	transition: opacity 0.1s ease-in-out;
+}
+
+#settings:hover {
+	opacity: 1;
+}
